@@ -26,9 +26,9 @@ def get_image():
         image_link = '''https://www.nasa.gov/sites/default/files/styles/full_width_feature/public/thumbnails/image/sts111-306-012_orig.jpg'''
         image = requests.get(image_link)
 
-    image_save = open('C:\\Users\\phil-\\Pictures\\DesktopBackground\\screensaver.jpg', 'wb')
+    image_save = open('C:\\Users\\phil\\Pictures\\DesktopBackground\\screensaver.jpg', 'wb')
     image_save.write(image.content)
     image_save.close()
-    ctypes.windll.user32.SystemParametersInfoW(20, 0, 'C:\\Users\\phil-\\Pictures\\DesktopBackground\\screensaver.jpg', 0)
+    ctypes.windll.user32.SystemParametersInfoW(20, 0, 'C:\\Users\\phil\\Pictures\\DesktopBackground\\screensaver.jpg', 0)
 
 get_image()
